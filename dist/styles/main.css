@@ -5177,6 +5177,29 @@ body {
   overflow-y: auto;
 }
 
+.mob-menu__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mob-menu__close:hover {
+  transition: all 0.3s;
+}
+
+.mob-menu__close:hover svg {
+  fill: #5F6366;
+}
+
+.mob-menu__close:hover svg path {
+  fill: #5F6366;
+}
+
 .mob-menu .search__mob {
   width: 500px;
   position: relative;
@@ -6146,6 +6169,17 @@ body {
   margin-top: 48px;
 }
 
+.preview__sidepanel {
+  z-index: 100;
+}
+
+.preview__sidepanel__icon img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .offer__title--mob {
   display: none;
 }
@@ -6346,7 +6380,7 @@ body {
 }
 
 .operations__picture__indicator--1 {
-  width: 400px;
+  width: 300px;
   left: auto;
   right: -30px;
   top: 30px;
@@ -6354,25 +6388,25 @@ body {
 }
 
 .operations__picture__indicator--2 {
-  width: 400px;
+  width: 320px;
   left: auto;
   right: -30px;
-  top: 143px;
-  transform: rotate(162deg);
+  top: 103px;
+  transform: rotate(175deg);
 }
 
 .operations__picture__indicator--3 {
   width: 239px;
   left: auto;
-  right: 0;
-  top: 400px;
+  right: -30px;
+  top: 250px;
 }
 
 .operations__picture__indicator--4 {
   width: 238px;
   left: auto;
   right: 0;
-  top: 775px;
+  top: 575px;
 }
 
 .operations__picture img {
@@ -6501,7 +6535,8 @@ body {
 }
 
 .operations__special .operations__item {
-  margin-bottom: 55px;
+  margin-bottom: 25px;
+  padding-bottom: 30px;
 }
 
 .operations__special .operations__item__tilte {
@@ -9179,6 +9214,11 @@ body {
     margin-bottom: 20px;
   }
 
+  .mob-menu__close {
+    top: 15px;
+    right: 15px;
+  }
+
   .product-card {
     padding-bottom: 65px;
   }
@@ -9198,7 +9238,7 @@ body {
   }
 
   .block__textTwo h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .block__textTwo h3 {
@@ -9244,12 +9284,12 @@ body {
     padding-top: 0;
   }
 
-  .about__fact__descr {
-    color: #F6F8FA;
+  .about__data {
+    margin-bottom: 50px;
   }
 
-  .about__fact__count {
-    color: #F6F8FA;
+  .about__photo {
+    display: none;
   }
 
   .service .service__list__item {
@@ -9430,8 +9470,8 @@ body {
     font-size: 42px !important;
   }
 
-  .about__data {
-    margin-bottom: 250px;
+  .block__textTwo h2 {
+    font-size: 22px;
   }
 
   .about__fact__descr {
@@ -9449,6 +9489,16 @@ body {
 
   .operations__title {
     font-size: 32px !important;
+  }
+
+  .operations__item__tilte {
+    font-size: 22px;
+  }
+
+  .operations__item__tilte svg {
+    width: 53px;
+    height: 53px;
+    margin-right: 15px;
   }
 
   .operations__special .operations__title {

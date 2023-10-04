@@ -91,7 +91,10 @@
 			font-size: 42px;
 		}
 		@include max(xs) {
-				font-size: 32px;
+				font-size: 28px;
+		}
+		@include max(xxs) {
+				font-size: 22px;
 		}
 
 	}

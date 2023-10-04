@@ -96,6 +96,15 @@
 		}
 	}
 	&__sidepanel {
+		z-index: 100;
+		&__icon {
+			img {
+				position: relative;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
 		@include max(md) {
 			display: none;
 		}
@@ -107,27 +116,32 @@
 		@include max(md) {
 			margin-bottom: 200px;
 		}
-		@include max(xxs) {
-			margin-bottom: 250px;
+		@include max(xs) {
+			margin-bottom: 50px;
 		}
 	}
 	&__fact {
 		&__descr {
-			@include max(xs) {
-				color: #F6F8FA;
-			}
+			// @include max(xs) {
+			// 	color: #F6F8FA;
+			// }
 			@include max(xxs) {
 				font-size: 18px;
 			}
 		}
 		&__count {
-			@include max(xs) {
-				color: #F6F8FA;
-			}
+			// @include max(xs) {
+			// 	color: #F6F8FA;
+			// }
 			@include max(xxs) {
 				font-size: 32px;
 				top: 10px;
 			}
+		}
+	}
+	&__photo {
+		@include max(xs) {
+			display: none;
 		}
 	}
 }
@@ -534,30 +548,30 @@
 				object-fit: contain;
 			}
 			&--1 {
-				width: 400px;
+				width: 300px;
 				left: auto;
 				right: -30px;
 				top: 30px;
 				transform: rotateX(150deg);
 			}
 			&--2 {
-				width: 400px;
+				width: 320px;
 				left: auto;
 				right: -30px;
-				top: 143px;
-				transform: rotate(162deg);
+				top: 103px;
+				transform: rotate(175deg);
 			}
 			&--3 {
 				width: 239px;
 				left: auto;
-				right: 0;
-				top: 400px;
+				right: -30px;
+				top: 250px;
 			}
 			&--4 {
 				width: 238px;
 				left: auto;
 				right: 0;
-				top: 775px;
+				top: 575px;
 			}
 		}
 		img {
@@ -612,6 +626,9 @@
 			@include max(xs) {
 				font-size: 32px;
 			}
+			@include max(xxs) {
+				font-size: 22px;
+			}
 			svg {
 				position: relative;
 				width: 83px;
@@ -620,6 +637,11 @@
 				@include max(xs) {
 					width: 63px;
 					height: 63px;
+					margin-right: 15px;
+				}
+				@include max(xxs) {
+					width: 53px;
+					height: 53px;
 					margin-right: 15px;
 				}
 			}
@@ -725,7 +747,8 @@
 	
 		}
 		&__item {
-			margin-bottom: 55px;
+			margin-bottom: 25px;
+			padding-bottom: 30px;
 			@include max(xs){
 				margin-bottom: 24px;
 			}

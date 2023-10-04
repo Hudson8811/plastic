@@ -209,6 +209,29 @@ header.header {
 	background: #7F8285;
 	height: calc(100vh - 0px);
 	overflow-y: auto;
+	&__close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		transition: all .3s;
+		@include max(xs) {
+			top: 15px;
+			right: 15px;
+		}
+		&:hover {
+			transition: all .3s;
+			svg {
+				fill: #5F6366; 
+				path {
+					fill: #5F6366;
+				}
+			}
+		}
+	}
 	.search__mob {
 		width: 500px;
 		position: relative;

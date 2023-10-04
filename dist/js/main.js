@@ -278,6 +278,7 @@ jQuery(function () {
 	let overlayBg = document.querySelector(".mob-menu--overlay");
 	let mobMenu = document.querySelector(".mob-menu__section");
 	let humb = document.querySelector(".hamburger");
+	let mobMenuClose = document.querySelector(".mob-menu__close");
 	
 	var hamburger = $(".hamburger");
 	hamburger.on("click", function(e) {
@@ -296,6 +297,11 @@ jQuery(function () {
 		}
 	});
 	
+	mobMenuClose.addEventListener("click", function () {
+		mobMenu.classList.remove("active");
+		humb.classList.remove("is-active");
+		bodyYesScroll()
+	});
 	overlayBg.addEventListener("click", function () {
 		mobMenu.classList.remove("active");
 		humb.classList.remove("is-active");
