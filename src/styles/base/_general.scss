@@ -1,0 +1,185 @@
+h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+	height: 100%;
+    font-family: $mainFont;
+}
+body{
+    display: flex;
+    flex-direction: column;
+	min-height: 100%;
+}
+.site-main{
+    width: 100%;
+    flex-grow: 1;
+}
+
+.container {
+    position: relative;
+	box-sizing: border-box;
+	width: 1482px;
+	max-width: 95%;
+	max-width: calc(100% - 0px);
+	margin: 0 auto;
+	@include max(xl) {
+		width: 1482px;
+		max-width: calc(100% - 40px * 2);
+	}
+	@include max(lg) {
+		width: 1168px;
+		max-width: calc(100% - 32px * 2);
+	}
+
+	@include max(md) {
+		max-width: calc(100% - 32px * 2);
+	}
+
+	@include max(sm) {
+		max-width: calc(100% - 16px * 2);
+	}
+	@include max(xs) {
+		max-width: calc(100% - 16px * 2);
+        padding-left: 0;
+        padding-right: 0;
+	}
+}
+.section-title {
+    @include max(sm) {
+        font-size: 80px !important;
+        margin-bottom: 30px;
+    }
+    @include max(xs) {
+        font-size: 50px !important;
+        margin-bottom: 20px;
+    }
+    @include max(xxs){
+        font-size: 42px !important;
+    } 
+}
+.title__121 {
+    color: #EDB3BE;
+    font-family: $rosa;
+    font-size: 121px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 10.89px;
+    margin-bottom: 40px;
+    @include max(sm) {
+        font-size: 80px !important;
+        margin-bottom: 30px;
+    }
+    @include max(xs) {
+        font-size: 50px !important;
+        margin-bottom: 20px;
+    } 
+    @include max(xxs){
+        font-size: 42px !important;
+    }  
+    span {
+        color: #EDB3BE;
+        font-family: $rosa;
+        font-size: 121px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 10.89px;
+        margin-bottom: 40px;
+        @include max(sm) {
+            font-size: 80px !important;
+            margin-bottom: 30px;
+        }
+        @include max(xs) {
+            font-size: 50px !important;
+            margin-bottom: 20px;
+        } 
+        @include max(xxs){
+            font-size: 42px !important;
+        }  
+    }
+}
+.title__100 {
+    font-family: $rosa;
+    color: #99CFD3;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 9px;
+    margin-bottom: 10px;
+    @include max(sm) {
+        font-size: 80px !important;
+        margin-bottom: 30px;
+    }
+    @include max(xs) {
+        font-size: 50px !important;
+        margin-bottom: 20px;
+    } 
+    @include max(xxs){
+        font-size: 42px !important;
+    } 
+    span {
+        font-family: $rosa;
+        color: #99CFD3;
+        font-size: 100px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 9px;
+        margin-bottom: 10px;
+        @include max(sm) {
+            font-size: 80px !important;
+            margin-bottom: 30px;
+        }
+        @include max(xs) {
+            font-size: 50px !important;
+            margin-bottom: 20px;
+        } 
+        @include max(xxs){
+            font-size: 42px !important;
+        }         
+    }  
+}
+.title__65 {
+    @include max(xs) {
+       font-size: 52px;
+    }
+}
+.title__46 {
+    @include max(md) {
+        font-size: 34px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+}
+.title__44 {
+    @include max(xs) {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+}
+.text__25 {
+    @include max(sm) {
+        font-size: 20px !important;
+    }
+    @include max(xs) {
+        font-size: 14px !important;
+    }
+}
+.text__20 {
+    @include max(xs) {
+        font-size: 14px;
+    }
+}
+
+.swiper-button-prev::after, .swiper-button-next::after{
+    font-size: 25px;
+}
+
+.pink {
+    color: #EDB3BE !important;
+}

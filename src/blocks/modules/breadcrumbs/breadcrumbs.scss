@@ -1,0 +1,53 @@
+.breadcrumbs {
+	display: flex;
+	width: 100%;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	margin-bottom: 58px;
+	@include max(md) {
+		margin-bottom: 30px;
+	}
+	&__item {
+		position: relative;
+		width: auto;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		font-style: normal;
+		color: $mainDark;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: 0.6px;
+		height: 12px;
+		transition: all .3s;
+		@include max(sm) {
+			font-size: 11px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			letter-spacing: 0.55px;
+		}
+		cursor: pointer;
+		&:hover {
+			transition: all .3s;
+			color: $grey;
+		}
+		&::after {
+			position: relative;
+			display: block;
+			margin-left: 8px;
+			margin-right: 8px;
+			margin-bottom: 5px;
+			content: url(../img/svg/breadcrumbs.svg);
+		}
+		&:last-child {
+			color: $greyBlack;
+			&::after {
+				content: none
+			}
+		}
+	}
+}
+
