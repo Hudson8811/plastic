@@ -5118,7 +5118,7 @@ body {
 }
 
 .connection__contacts::before {
-  content: url("../img/icons/phone.png");
+  content: url("../img/icons/phone.png") !important;
   display: inline-block;
   width: 20px;
   height: 20px;
