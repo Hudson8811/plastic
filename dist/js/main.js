@@ -166,6 +166,36 @@ jQuery(function () {
 			// }
 		});
 	})
+	var reviewsAll;
+	$('.js-reviews-all__slider').each(function(){
+		var slider=$(this)
+		var reviewsAll = new Swiper(slider[0], {
+			// watchOverflow: true,
+			// watchSlidesVisibility: true,
+			// watchSlidesProgress: true,
+			// preventInteractionOnTransition: true,
+			slidesPerView: 1,
+			navigation: {
+					nextEl: ".reviews-all-next",
+					prevEl: ".reviews-all-prev"
+			},
+			// thumbs: {
+			// 		swiper: galleryThumbs
+			// },
+			pagination: {
+					el: slider.find('.preview__slider__pagination')[0],
+					type: 'bullets',
+					clickable: true
+			}
+			// breakpoints: {
+			//     // when window width is >= 480px
+			//     992: {
+			//         slidesPerView: 2.2,
+			//         spaceBetween: 30
+			//     },
+			// }
+		});
+	})
 	var diplomasSlide;
 	$('.js-diplomas__slider').each(function(){
 		var slider=$(this)
@@ -275,6 +305,70 @@ jQuery(function () {
 		galleryMain.controller.control = galleryThumbs;
 	});
 
+
+
+
+	$('.double-slider').each(function () {
+		var galleryThumbs;
+		var galleryMain;
+		var group = $(this);
+		group.find('.js-double-slider-thumbs').each(function () {
+				var slider = $(this)
+				galleryThumbs = new Swiper(slider[0], {
+						centeredSlides: true,
+						centeredSlidesBounds: true,
+						slidesPerView: 4,
+						watchOverflow: true,
+						watchSlidesVisibility: true,
+						watchSlidesProgress: true,
+						direction: 'horizontal',
+						centeredSlides: false,
+							centeredSlidesBounds: false,
+						spaceBetween: 10,
+						navigation: {
+								nextEl: ".double-slider-thumbs-next",
+								prevEl: ".double-slider-thumbs-prev"
+						},
+						breakpoints: {
+								// when window width is >= 480px
+								992: {
+										direction: 'vertical',
+										spaceBetween: 24,
+								},
+						}
+				})
+		});
+	
+		group.find('.js-double-slider-main').each(function () {
+				var slider = $(this)
+				galleryMain = new Swiper(slider[0], {
+						watchOverflow: true,
+						watchSlidesVisibility: true,
+						watchSlidesProgress: true,
+						preventInteractionOnTransition: true,
+						slidesPerView: 1,
+						thumbs: {
+								swiper: galleryThumbs
+						},
+						navigation: {
+								nextEl: ".double-slider-main-next",
+								prevEl: ".double-slider-main-prev"
+						},
+						// breakpoints: {
+						//     // when window width is >= 480px
+						//     992: {
+						//         slidesPerView: 2.2,
+						//         spaceBetween: 30
+						//     },
+						// }
+				})
+			//   galleryMain.controller.control = galleryThumbs;
+		});
+	
+	//   galleryThumbs.controller.control = galleryMain;
+		galleryMain.controller.control = galleryThumbs;
+	});
+
 	let overlayBg = document.querySelector(".mob-menu--overlay");
 	let mobMenu = document.querySelector(".mob-menu__section");
 	let humb = document.querySelector(".hamburger");
@@ -359,3 +453,35 @@ accordions.forEach((accordion) => {
 		}
 	};
 });
+
+	///tabs
+	var tabNavs = document.querySelectorAll(".nav-tab");
+	var tabPanes = document.querySelectorAll(".tab-pane");
+  if(tabNavs !==null & tabPanes !==null) {
+		tabClick() 
+	}
+	console.log([0, 1, 2,] + [3, 4, 5])
+	function tabClick() {
+	
+		for (var i = 0; i < tabNavs.length; i++) {
+
+			tabNavs[i].addEventListener("click", function(e){
+				e.preventDefault();
+				var activeTabAttr = e.target.getAttribute("data-tab");
+	
+				for (var j = 0; j < tabNavs.length; j++) {
+					var contentAttr = tabPanes[j].getAttribute("data-tab-content");
+	
+					if (activeTabAttr === contentAttr) {
+						tabNavs[j].classList.add("active");
+						tabPanes[j].classList.add("active"); 
+					} else {
+						tabNavs[j].classList.remove("active");
+						tabPanes[j].classList.remove("active");
+					}
+				};
+			});
+		}
+	}
+
+	///tabs

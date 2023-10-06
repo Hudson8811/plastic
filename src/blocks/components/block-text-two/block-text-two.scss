@@ -35,6 +35,40 @@
 			}			
 		}
 	}
+	.block-slider {
+		position: relative;
+		width: 745px;
+		height: 498px;
+		@include max(md)  {
+			width: 100%;
+			height: auto;
+			clear: both; 
+		}
+		.product-card__slider {
+			height: 100%;
+		}
+		&.float--right {
+			float: right;
+			margin-left: 121px;
+			@media (max-width: 1400px) {
+				float: none;
+				clear: both; 
+			}
+			@include max(xl) {
+				margin-left: 0;
+			}
+		}
+		&.float--left {
+			float: left;
+			margin-right: 35px;
+			@media (max-width: 1400px) {
+				float: none;
+			}
+			@include max(xl) {
+				margin-right: 35px;
+			}
+		}
+	}
 	p {
 		color: #5F6366;
 		font-size: 25px;

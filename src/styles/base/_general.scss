@@ -148,6 +148,27 @@ body{
        font-size: 52px;
     }
 }
+.title__58 {
+    position: relative;
+    width: 100%;
+    color: #5F6366;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.9px;
+    @include max(sm) {
+        font-size: 42px;
+    }
+    @include max(xs) {
+            font-size: 28px;
+    }
+    @include max(xxs) {
+            font-size: 22px;
+    }
+
+
+}
 .title__46 {
     @include max(md) {
         font-size: 34px;

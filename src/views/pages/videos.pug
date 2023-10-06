@@ -1,0 +1,96 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Videos page"
+
+block content
+	
+	section.videos
+		.container
+			h3.section-title.videos__title.blue Видео
+			.videos__list
+				.videos__list__item.videos__list__item--one
+					a(href="video/hero.mp4" data-fancybox="videos"  data-caption="Большое описание"  data-title="Тут будет название" class="videos__list__item__link")
+						img.video-reviews__preview(src='img/text-video--1.png', srcset='img/text-video--1.png 2x', alt='')
+						.video-reviews__play
+							img(src='img/svg/i-play-2.svg', alt="")
+						.video-reviews__text
+							!="КАК ПРОИСХОДИТ ПРЕОБРАЖЕНИЕ"
+				.videos__list__item.videos__list__item--two
+					a(href="video/hero.mp4" data-fancybox="videos"  data-caption="Большое описание"  data-title="Тут будет название" class="videos__list__item__link")
+						img.video-reviews__preview(src='img/text-video--1.png', srcset='img/text-video--1.png 2x', alt='')
+						.video-reviews__play
+							img(src='img/svg/i-play-2.svg', alt="")
+						.video-reviews__text
+							!="КАК ПРОИСХОДИТ ПРЕОБРАЖЕНИЕ"
+				
+				.videos__list__item.videos__list__item--three
+					a(href="video/hero.mp4" data-fancybox="videos"  data-caption="Большое описание"  data-title="Тут будет название" class="videos__list__item__link")
+						img.video-reviews__preview(src='img/text-video--1.png', srcset='img/text-video--1.png 2x', alt='')
+						.video-reviews__play
+							img(src='img/svg/i-play-2.svg', alt="")
+						.video-reviews__text
+							!="КАК ПРОИСХОДИТ ПРЕОБРАЖЕНИЕ"
+
+				.videos__list__item.videos__list__item--four
+					a(href="video/hero.mp4" data-fancybox="videos"  data-caption="Большое описание"  data-title="Тут будет название" class="videos__list__item__link")
+						img.video-reviews__preview(src='img/text-video--1.png', srcset='img/text-video--1.png 2x', alt='')
+						.video-reviews__play
+							img(src='img/svg/i-play-2.svg', alt="")
+						.video-reviews__text
+							!="КАК ПРОИСХОДИТ ПРЕОБРАЖЕНИЕ"
+
+				.videos__list__item.videos__list__item--fife
+					a(href="video/hero.mp4" data-fancybox="videos"  data-caption="Большое описание"  data-title="Тут будет название" class="videos__list__item__link")
+						img.video-reviews__preview(src='img/text-video--1.png', srcset='img/text-video--1.png 2x', alt='')
+						.video-reviews__play
+							img(src='img/svg/i-play-2.svg', alt="")
+						.video-reviews__text
+							!="КАК ПРОИСХОДИТ ПРЕОБРАЖЕНИЕ"
+				.videos__list__item.videos__list__item--six
+					a(href="video/hero.mp4" data-fancybox="videos"  data-caption="Большое описание"  data-title="Тут будет название" class="videos__list__item__link")
+						img.video-reviews__preview(src='img/text-video--1.png', srcset='img/text-video--1.png 2x', alt='')
+						.video-reviews__play
+							img(src='img/svg/i-play-2.svg', alt="")
+						.video-reviews__text
+							!="КАК ПРОИСХОДИТ ПРЕОБРАЖЕНИЕ"
+				.videos__list__item.videos__list__item--seven
+					a(href="video/hero.mp4" data-fancybox="videos"  data-caption="Большое описание"  data-title="Тут будет название" class="videos__list__item__link")
+						img.video-reviews__preview(src='img/text-video--1.png', srcset='img/text-video--1.png 2x', alt='')
+						.video-reviews__play
+							img(src='img/svg/i-play-2.svg', alt="")
+						.video-reviews__text
+							!="КАК ПРОИСХОДИТ ПРЕОБРАЖЕНИЕ"
+				.videos__list__item.videos__list__item--eight
+					a(href="video/hero.mp4" data-fancybox="videos"  data-caption="Большое описание"  data-title="Тут будет название" class="videos__list__item__link")
+						img.video-reviews__preview(src='img/text-video--1.png', srcset='img/text-video--1.png 2x', alt='')
+						.video-reviews__play
+							img(src='img/svg/i-play-2.svg', alt="")
+						.video-reviews__text
+							!="КАК ПРОИСХОДИТ ПРЕОБРАЖЕНИЕ"
+				.videos__list__item.videos__list__item--nine
+					a(href="video/hero.mp4" data-fancybox="videos"  data-caption="Большое описание"  data-title="Тут будет название" class="videos__list__item__link")
+						img.video-reviews__preview(src='img/text-video--1.png', srcset='img/text-video--1.png 2x', alt='')
+						.video-reviews__play
+							img(src='img/svg/i-play-2.svg', alt="")
+						.video-reviews__text
+							!="КАК ПРОИСХОДИТ ПРЕОБРАЖЕНИЕ"
+	include ../../blocks/components/offer/offer
+	<section class="section__jarallax">
+		<div class="jarallax">
+			<picture class="jarallax-img">
+				<source media="..." srcset="img/section--15.png">
+				<img src="img/section--15.png" alt="">
+			</picture>
+		</div>	
+	</section>
+
+	<section class="order-call">
+			<form action="">
+					<input type="tel" name="phone_1" class="js-mask-phone input__phone " placeholder="+7 (___) ___-__-__">
+					<input type="submit" class="order-call__submit blue-buttom" value="Заказать звонок" />
+			</form>
+	</section>
+
+	
