@@ -454,30 +454,66 @@ accordions.forEach((accordion) => {
 	};
 });
 
-	///tabs
-	var tabNavs = document.querySelectorAll(".nav-tab");
-	var tabPanes = document.querySelectorAll(".tab-pane");
-  if(tabNavs !==null & tabPanes !==null) {
-		tabClick() 
-	}
-	console.log([0, 1, 2,] + [3, 4, 5])
-	function tabClick() {
+	// ///tabs
 	
-		for (var i = 0; i < tabNavs.length; i++) {
+	// var tabNavs = document.querySelectorAll(".nav-tab");
+	// var tabPanes = document.querySelectorAll(".tab-pane");
+  // if(tabNavs !==null & tabPanes !==null) {
+	// 	tabClick() 
+	// }
+	// function tabClick() {
+	
+	// 	for (var i = 0; i < tabNavs.length; i++) {
 
-			tabNavs[i].addEventListener("click", function(e){
+	// 		tabNavs[i].addEventListener("click", function(e){
+	// 			e.preventDefault();
+	// 			var activeTabAttr = e.target.getAttribute("data-tab");
+	
+	// 			for (var j = 0; j < tabNavs.length; j++) {
+	// 				var contentAttr = tabPanes[j].getAttribute("data-tab-content");
+	
+	// 				if (activeTabAttr === contentAttr) {
+	// 					tabNavs[j].classList.add("active");
+	// 					tabPanes[j].classList.add("active"); 
+	// 				} else {
+	// 					tabNavs[j].classList.remove("active");
+	// 					tabPanes[j].classList.remove("active");
+	// 				}
+	// 			};
+	// 		});
+	// 	}
+	// }
+
+	// ///tabs
+
+
+
+
+
+	///tabs
+	var articlesMenutabNavs = document.querySelectorAll(".articles-menu__tab");
+	var articlesMenutabPanes = document.querySelectorAll(".articles-menu__tab-content");
+  if(articlesMenutabNavs !==null & articlesMenutabPanes !==null) {
+		articlesMenutabClick() 
+	}
+
+	function articlesMenutabClick() {
+		for (var i = 0; i < articlesMenutabNavs.length; i++) {
+			console.log(articlesMenutabNavs);
+			console.log(articlesMenutabPanes);
+			articlesMenutabNavs[i].addEventListener("click", function(e){
 				e.preventDefault();
 				var activeTabAttr = e.target.getAttribute("data-tab");
 	
-				for (var j = 0; j < tabNavs.length; j++) {
-					var contentAttr = tabPanes[j].getAttribute("data-tab-content");
+				for (var j = 0; j < articlesMenutabNavs.length; j++) {
+					var contentAttr = articlesMenutabPanes[j].getAttribute("data-tab-content");
 	
 					if (activeTabAttr === contentAttr) {
-						tabNavs[j].classList.add("active");
-						tabPanes[j].classList.add("active"); 
+						articlesMenutabNavs[j].classList.add("active");
+						articlesMenutabPanes[j].classList.add("active"); 
 					} else {
-						tabNavs[j].classList.remove("active");
-						tabPanes[j].classList.remove("active");
+						articlesMenutabNavs[j].classList.remove("active");
+						articlesMenutabPanes[j].classList.remove("active");
 					}
 				};
 			});
