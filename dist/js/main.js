@@ -454,37 +454,101 @@ accordions.forEach((accordion) => {
 	};
 });
 
-	// ///tabs
+	///tabs
 	
-	// var tabNavs = document.querySelectorAll(".nav-tab");
-	// var tabPanes = document.querySelectorAll(".tab-pane");
-  // if(tabNavs !==null & tabPanes !==null) {
-	// 	tabClick() 
-	// }
-	// function tabClick() {
+	var tabNavs = document.querySelectorAll(".nav-tab");
+	var tabPanes = document.querySelectorAll(".tab-pane");
+  if(tabNavs !==null & tabPanes !==null) {
+		tabClick() 
+	}
+	function tabClick() {
 	
-	// 	for (var i = 0; i < tabNavs.length; i++) {
+		for (var i = 0; i < tabNavs.length; i++) {
 
-	// 		tabNavs[i].addEventListener("click", function(e){
-	// 			e.preventDefault();
-	// 			var activeTabAttr = e.target.getAttribute("data-tab");
+			tabNavs[i].addEventListener("click", function(e){
+				e.preventDefault();
+				var activeTabAttr = e.target.getAttribute("data-tab");
 	
-	// 			for (var j = 0; j < tabNavs.length; j++) {
-	// 				var contentAttr = tabPanes[j].getAttribute("data-tab-content");
+				for (var j = 0; j < tabNavs.length; j++) {
+					var contentAttr = tabPanes[j].getAttribute("data-tab-content");
 	
-	// 				if (activeTabAttr === contentAttr) {
-	// 					tabNavs[j].classList.add("active");
-	// 					tabPanes[j].classList.add("active"); 
-	// 				} else {
-	// 					tabNavs[j].classList.remove("active");
-	// 					tabPanes[j].classList.remove("active");
-	// 				}
-	// 			};
-	// 		});
-	// 	}
-	// }
+					if (activeTabAttr === contentAttr) {
+						tabNavs[j].classList.add("active");
+						tabPanes[j].classList.add("active"); 
+					} else {
+						tabNavs[j].classList.remove("active");
+						tabPanes[j].classList.remove("active");
+					}
+				};
+			});
+		}
+	}
 
-	// ///tabs
+	///tabs
+
+
+	///tabs
+	
+	var rewiewsTabNavs = document.querySelectorAll(".js-rewiews__tab");
+	var rewiewsTabPanes = document.querySelectorAll(".js-reviews__content");
+  if(rewiewsTabNavs !==null & rewiewsTabPanes !==null) {
+		rewiewsTabClick() 
+	}
+	function rewiewsTabClick() {
+	
+		for (var i = 0; i < rewiewsTabNavs.length; i++) {
+
+			rewiewsTabNavs[i].addEventListener("click", function(e){
+				e.preventDefault();
+				var activeTabAttr = e.target.getAttribute("data-tab");
+	
+				for (var j = 0; j < rewiewsTabNavs.length; j++) {
+					var contentAttr = rewiewsTabPanes[j].getAttribute("data-tab-content");
+	
+					if (activeTabAttr === contentAttr) {
+						rewiewsTabNavs[j].classList.add("active");
+						rewiewsTabPanes[j].classList.add("active"); 
+					} else {
+						rewiewsTabNavs[j].classList.remove("active");
+						rewiewsTabPanes[j].classList.remove("active");
+					}
+				};
+			});
+		}
+	}
+
+	///tabs
+	///tabs
+	
+	var menuLaptopTabNavs = document.querySelectorAll(".js-menu-laptop__tab");
+	var menuLaptopTabPanes = document.querySelectorAll(".js-menu-laptop__tab-content");
+  if(menuLaptopTabNavs !==null & menuLaptopTabPanes !==null) {
+		menuLaptopTabClick() 
+	}
+	function menuLaptopTabClick() {
+	
+		for (var i = 0; i < menuLaptopTabNavs.length; i++) {
+
+			menuLaptopTabNavs[i].addEventListener("click", function(e){
+				e.preventDefault();
+				var activeTabAttr = e.target.getAttribute("data-tab");
+	
+				for (var j = 0; j < menuLaptopTabNavs.length; j++) {
+					var contentAttr = menuLaptopTabPanes[j].getAttribute("data-tab-content");
+	
+					if (activeTabAttr === contentAttr) {
+						menuLaptopTabNavs[j].classList.add("active");
+						menuLaptopTabPanes[j].classList.add("active"); 
+					} else {
+						menuLaptopTabNavs[j].classList.remove("active");
+						menuLaptopTabPanes[j].classList.remove("active");
+					}
+				};
+			});
+		}
+	}
+
+	///tabs
 
 
 
@@ -498,26 +562,162 @@ accordions.forEach((accordion) => {
 	}
 
 	function articlesMenutabClick() {
-		for (var i = 0; i < articlesMenutabNavs.length; i++) {
-			console.log(articlesMenutabNavs);
-			console.log(articlesMenutabPanes);
-			articlesMenutabNavs[i].addEventListener("click", function(e){
-				e.preventDefault();
-				var activeTabAttr = e.target.getAttribute("data-tab");
+		// for (var i = 0; i < articlesMenutabNavs.length; i++) {
+		// 	console.log(articlesMenutabNavs);
+		// 	console.log(articlesMenutabPanes);
+		// 	articlesMenutabNavs[i].addEventListener("click", function(e){
+		// 		e.preventDefault();
+		// 		var activeTabAttr = e.target.getAttribute("data-tab");
 	
-				for (var j = 0; j < articlesMenutabNavs.length; j++) {
-					var contentAttr = articlesMenutabPanes[j].getAttribute("data-tab-content");
+		// 		for (var j = 0; j < articlesMenutabNavs.length; j++) {
+		// 			var contentAttr = articlesMenutabPanes[j].getAttribute("data-tab-content");
 	
-					if (activeTabAttr === contentAttr) {
-						articlesMenutabNavs[j].classList.add("active");
-						articlesMenutabPanes[j].classList.add("active"); 
-					} else {
-						articlesMenutabNavs[j].classList.remove("active");
-						articlesMenutabPanes[j].classList.remove("active");
-					}
-				};
-			});
-		}
+		// 			if (activeTabAttr === contentAttr) {
+		// 				articlesMenutabNavs[j].classList.add("active");
+		// 				articlesMenutabPanes[j].classList.add("active"); 
+		// 			} else {
+		// 				articlesMenutabNavs[j].classList.remove("active");
+		// 				articlesMenutabPanes[j].classList.remove("active");
+		// 			}
+		// 		};
+		// 	});
+		// }
+		$('.articles-menu__tab[data-tab]').on('click',function(){
+			var currentNav=$(this);
+			var dataTab = currentNav.attr("data-tab");
+			var tabsParent=$(this).closest('.tabs-parent');
+			var targetContent=tabsParent.find('.articles-menu__tab-content[data-tab-content="'+dataTab+'"]');
+			tabsParent.find('.articles-menu__tab').removeClass("active");
+			currentNav.addClass("active");
+			var parentTab=currentNav.closest('.accordion').find('.accordion__intro .articles-menu__tab');
+			if(parentTab.length>0){
+					parentTab.addClass("active");
+			}
+			targetContent.addClass("active").siblings(".active").removeClass("active");
+	});
 	}
 
+
 	///tabs
+
+	function modalReg() {
+		event.preventDefault();
+		$.fancybox.open({
+			src: "#modal-reg",
+			type: "inline",
+		});
+	}
+
+	var menuLinkInvested =document.querySelectorAll(".js-menu__link__invested")
+	if (menuLinkInvested !=null) {
+		menuLinkInvested.forEach((item) => {
+			item.addEventListener("click", function (e) {
+						e.preventDefault();
+						var link = e.target.parentNode;
+						var linkList = link.querySelector(".menu-laptop__list");
+						link.classList.toggle("active")
+						linkList.classList.toggle("active")
+						linkList.addEventListener("mouseleave", function() {
+							link.classList.remove("active")
+							linkList.classList.remove("active")
+						})
+			});
+		})
+	}
+
+
+	$(function ($, window, document, undefined) {
+    "use strict";
+    var pluginName = 'simpleAccordion',
+    defaults = {
+        multiple: false,
+        speedOpen: 300,
+        speedClose: 150,
+        easingOpen: null,
+        easingClose: null,
+        headClass: 'accordion-header',
+        bodyClass: 'accordion-body',
+        openClass: 'open',
+        defaultOpenClass: 'default-open',
+        cbClose: null, //function (e, $this) {},
+        cbOpen: null //function (e, $this) {}
+    };
+    function Accordion(element, options) {
+        this.$el = $(element);
+        this.options = $.extend({}, defaults, options);
+        this._defaults = defaults;
+        this._name = pluginName;
+        if (typeof this.$el.data('multiple') !== 'undefined') {
+            this.options.multiple = this.$el.data('multiple');
+            } else {
+            this.options.multiple = this._defaults.multiple;
+        }
+        this.init();
+    }
+    Accordion.prototype = {
+        init: function () {
+            var o = this.options,
+            $headings = this.$el.children('.' + o.headClass);
+            $headings.on('click', {_t:this}, this.headingClick);
+            $headings.filter('.' + o.defaultOpenClass).first().click();
+        },
+        headingClick: function (e) {
+            var $this = $(this),
+            _t = e.data._t,
+            o = _t.options,
+            $headings = _t.$el.children('.' + o.headClass),
+            $currentOpen = $headings.filter('.' + o.openClass);
+            if (!$this.hasClass(o.openClass)) {
+                if ($currentOpen.length && o.multiple === false) {
+                    $currentOpen.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
+                        if ($.isFunction(o.cbClose)) {
+                            o.cbClose(e, $currentOpen);
+                        }
+                        $this.addClass(o.openClass).next('.' + o.bodyClass).slideDown(o.speedOpen, o.easingOpen, function () {
+                            if ($.isFunction(o.cbOpen)) {
+                                o.cbOpen(e, $this);
+                            }
+                        });
+                    });
+                    } else {
+                    $this.addClass(o.openClass).next('.' + o.bodyClass).slideDown(o.speedOpen, o.easingOpen, function () {
+                        $this.removeClass(o.defaultOpenClass);
+                        if ($.isFunction(o.cbOpen)) {
+                            o.cbOpen(e, $this);
+                        }
+                    });
+                }
+                } else {
+                $this.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
+                    if ($.isFunction(o.cbClose)) {
+                        o.cbClose(e, $this);
+                    }
+                });
+            }
+        }
+    };
+    $.fn[pluginName] = function (options) {
+        return this.each(function () {
+            if (!$.data(this, 'plugin_' + pluginName)) {
+                $.data(this, 'plugin_' + pluginName,
+                new Accordion(this, options));
+            }
+        });
+    };
+	}(jQuery, window, document));
+	
+	$('.accordion-group').simpleAccordion({
+    
+    multiple: false, // возможность открытия одной вкладки или всех
+    speedOpen: 300, // скорость открытия вкладки
+    speedClose: 150, // скорость закрытия вкладки
+    easingOpen: null, // эффект плавности открытия вкладки
+    easingClose: null, // эффект плавности закрытия вкладки
+    headClass: 'accordion-header', // класс для заголовка вкладки
+    bodyClass: 'accordion-body', // класс для тела вкладки
+    openClass: 'open',  // класс для открытой вкладки, применяется к accordion-header
+    defaultOpenClass: 'default-open', // класс для открытой вкладки по умолчанию
+    cbClose: null, // callback-функция при закрытии вкладки - function (e, $this) {},
+    cbOpen: null // callback-функция при открытии вкладки - function (e, $this) {}
+    
+	});

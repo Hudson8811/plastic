@@ -508,10 +508,17 @@
 	}
 	&__wrapper {
 		min-height: 995px;
+		@include max(md) {
+			height: auto;
+			min-height: auto;
+		}
 	}
 	&__bg {
 		&-photo {
 			bottom: 145px;
+			@include max(md) {
+				display: none;
+			}
 		}
 
 	}
@@ -522,7 +529,10 @@
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-flow: row-reverse nowrap;
-	width: 100%;	
+	width: 100%;
+	@include max(md) {
+		flex-flow: column nowrap;
+	}
 	.articles-menu__tab__line {
 		@include max(sm) {
 			display: none;
@@ -536,7 +546,6 @@
 		padding-top: 38px;
 		padding-bottom: 53px;
 		width: 100%;
-		background: #F6F8FA;
 	}
 	.tab-content {
 		position: relative;
@@ -544,6 +553,9 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+		@include max(md) {
+			width: 100%;
+		}
 	}
 	&__tabs {
 		position: relative;
@@ -556,21 +568,48 @@
 		@include max(lgBig) {
 			flex-flow: row wrap;
 		}
+		@include max(lg) {
+			flex-flow: row wrap;
+			justify-content: flex-end;
+		}
+		@include max(md) {
+			width: 100%;
+			padding-top: 0;
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+		@include max(xs) {
+			width: 100%;
+			padding-top: 0;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
 	}
 	&__tab {
 		position: relative;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		width: 100%;
+		width: auto;
 		transition: all 0.3s;
 		margin-bottom: 34px;
 		@include max(lgBig) {
 			margin-bottom: 24px;
 		}
+		@include max(md) {
+			margin-bottom: 24px;
+			margin-right: 24px;
+			width: auto;
+		}
 		&--inner {
 			max-width: 200px;
 			margin-bottom: 34px;
+			@include max(md) {
+				margin-bottom: 15px;
+				text-align: left;
+			}
 			&:hover {
 				transition: all 0.3s;
 				.articles-menu__tab__line {
@@ -666,7 +705,7 @@
 			background: #EDB3BE;
 			margin-right: 21px;
 			pointer-events: none;
-			@include max(sm) {
+			@include max(md) {
 				display: none;
 			}
 		}
@@ -679,6 +718,10 @@
 			height: 83px;
 			margin-right: 21px;
 			pointer-events: none;
+			@include max(md) {
+				width: 53px;
+				height: 53px;				
+			}
 			svg {
 				path.no-fill {
 					fill: transparent;
@@ -732,6 +775,7 @@
 	}
 
 }
+
 .articles-menu--list.accordions{
 	.accordion {
 		width: 100%;
@@ -754,7 +798,6 @@
 			justify-content: flex-start;
 			align-items: center;
 			transition: all 0.3s;
-			margin-bottom: 30px;
 			&:hover {
 				transition: all 0.3s;
 			}
@@ -832,6 +875,9 @@
 			align-items: flex-end;
 			flex-flow: column;
 			margin-bottom: 0;
+			@include max(md) {
+				align-items: flex-start;
+			}
 			a {
 				color: #fff;
 				font-size: 14px;
@@ -1585,13 +1631,43 @@
 		}
 	}
 }
+.modal-reg-login {
+	padding: 0;
+	.offer__form {
+		padding: 58px;
+		padding-top: 98px;
+		padding-bottom: 33px;
+
+		.offer__title {
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 51px;
+			color: #5F6366;
+			text-align: center;
+			font-size: 41px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			letter-spacing: 3.69px;	
+			margin-top: 0;		
+		}
+	}
+	.periodSelect {
+		margin-bottom: 24px !important;
+	}
+	.form-connection input {
+		margin-bottom: 24px !important;
+	}
+}
 .reviews {
 	position: relative;
 	width: 100%;
 	&__wrapper {
 		position: relative;
 		width: 100%;
-		@media (max-width: 1400px) {
+		@include max(md) {
+			margin-top: 30px;
 			display: flex;
 			flex-flow: column-reverse nowrap;
 			justify-content: flex-start;
@@ -1616,12 +1692,221 @@
 	}
 	&__content {
 		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
 		width: 100%;
+		padding-right: 105px;
+		@include max(md) {
+			padding-right: 0px;
+		}
 	}
 	&__item {
 		position: relative;
 		width: 100% !important;
 	}
+}
+.reviews-menu {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: column nowrap;
+	width: 450px;
+	@include max(md) {
+		width: 100%;
+		flex-flow: row wrap;
+	}
+	@include max(xs) {
+		width: 100%;
+		flex-flow: column nowrap;
+	}
+	.articles-menu__tab__line {
+		@include max(sm) {
+			display: none;
+		}
+	}
+	&__section {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding-top: 38px;
+		padding-bottom: 53px;
+		width: 100%;
+	}
+	.tab-content {
+		position: relative;
+		width: calc(100% - 360px);
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		@include max(md) {
+			width: 100%;
+		}
+	}
+	&__tabs {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		width: 360px;
+		padding-top: 145px;
+		@include max(lgBig) {
+			flex-flow: row wrap;
+		}
+		@include max(lg) {
+			flex-flow: row wrap;
+			justify-content: flex-end;
+		}
+		@include max(md) {
+			width: 100%;
+			padding-top: 0;
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+		@include max(xs) {
+			width: 100%;
+			padding-top: 0;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+	}
+	&__tab {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: auto;
+		transition: all 0.3s;
+		margin-bottom: 34px;
+		@include max(lgBig) {
+			margin-bottom: 24px;
+		}
+		@include max(md) {
+			margin-bottom: 24px;
+			margin-right: 24px;
+			width: auto;
+		}
+
+		&:hover {
+			transition: all 0.3s;
+			.reviews-menu__tab__line {
+				background: #99CFD3;
+			}
+			.reviews-menu__tab__icon {
+				svg {
+					path.no-fill {
+						fill: transparent;
+					}
+					path {
+						fill: #99CFD3;
+					}
+				}
+			}
+			.reviews-menu__tab__text {
+				color: #99CFD3;
+			}
+		}
+		&.active {
+			transition: all 0.3s;
+			.reviews-menu__tab__line {
+				background: #99CFD3;
+			}
+			.reviews-menu__tab__icon {
+				svg {
+					path.no-fill {
+						fill: transparent;
+					}
+					path {
+						fill: #99CFD3;
+					}
+				}
+			}
+			.reviews-menu__tab__text {
+				color: #99CFD3;
+			}			
+		}
+		&__line {
+			position: relative;
+			width: 47px;
+			height: 2px;
+			background: #5F6366;
+			margin-right: 21px;
+			pointer-events: none;
+			@include max(md) {
+				display: none;
+			}
+		}
+		&__icon {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 83px;
+			height: 83px;
+			margin-right: 21px;
+			pointer-events: none;
+			@include max(md) {
+				width: 53px;
+				height: 53px;				
+			}
+			svg {
+				path.no-fill {
+					fill: transparent;
+				}
+				path {
+					fill: #5F6366;
+				}
+			}
+			@include max(sm) {
+				width: 53px;
+				height: 53px;
+				margin-right: 15px;
+			}
+			img {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+		}
+		&__text {
+			color: #5F6366;
+			font-size: 41px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			letter-spacing: 0.82px;
+			pointer-events: none;
+			@include max(sm) {
+				font-size: 28px;
+			}			
+		}
+	}
+	&__tab-content {
+		position: relative;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-top: 35px;
+		@include max(sm) {
+			margin-top: 25px;
+		}		
+		.operations {
+			&__item {
+				&__list {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
 }
 .reviews-services {
 	&__section {
@@ -2444,6 +2729,8 @@
 	}
 
 }
+
+
 .videos {
 	position: relative;
 	display: block;
@@ -2539,6 +2826,19 @@
 	display: none;
 }
 .tab-pane.active {
+	display: flex;
+}
+
+
+.reviews__nav-tab.active {
+	cursor: pointer; 
+}
+.tab-content {
+}
+.reviews__content {
+	display: none;
+}
+.reviews__content.active {
 	display: flex;
 }
 
@@ -3204,7 +3504,9 @@
     border-radius: 5px 5px 0 0;
   }
 }
-
+.select2-container.select2-container--custom-theme--no-border.select2-container--open {
+	z-index: 99993;
+}
 .periodSelect.periodSelect--date {
 	margin-bottom: 0 !important;
 	.select2-container.select2-container--date {

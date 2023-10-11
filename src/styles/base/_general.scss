@@ -12,6 +12,11 @@ body{
     flex-direction: column;
 	min-height: 100%;
 }
+body.Bodymotionless {
+	width: 100vw;
+	min-height: 100vh;
+	overflow: hidden;
+}
 .site-main{
     width: 100%;
     flex-grow: 1;
