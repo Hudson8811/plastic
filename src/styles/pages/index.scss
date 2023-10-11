@@ -312,11 +312,14 @@
 .section__jarallax {
 	position: relative;
 	width: 100%;
+	overflow: hidden;
 	height: 914px;
 	background: #eaeef3;
 	@include max(sm) {
-		height: 100vh;
-		max-height: 600px;
+		height: 300px;
+	}
+	@include max(xs) {
+		height: 250px;
 	}
 	.container {
 		position: relative;
@@ -507,7 +510,7 @@
 		}
 	}
 	&__wrapper {
-		min-height: 995px;
+		min-height: 795px;
 		@include max(md) {
 			height: auto;
 			min-height: auto;
@@ -515,7 +518,7 @@
 	}
 	&__bg {
 		&-photo {
-			bottom: 145px;
+			bottom: 115px;
 			@include max(md) {
 				display: none;
 			}
@@ -1633,11 +1636,18 @@
 }
 .modal-reg-login {
 	padding: 0;
+	@include max(xs) {
+		width: 90%;
+	}
 	.offer__form {
 		padding: 58px;
 		padding-top: 98px;
 		padding-bottom: 33px;
-
+		@include max(xs) {
+			padding: 20px;
+			padding-top: 58px;
+			padding-bottom: 25px;			
+		}
 		.offer__title {
 			position: relative;
 			margin-left: auto;
@@ -1650,7 +1660,12 @@
 			font-weight: 300;
 			line-height: normal;
 			letter-spacing: 3.69px;	
-			margin-top: 0;		
+			margin-top: 0;
+			padding-bottom: 0;
+			@include max(xs) {
+				font-size: 30px;
+				margin-bottom: 20px;	
+			}
 		}
 	}
 	.periodSelect {
@@ -2735,10 +2750,14 @@
 	position: relative;
 	display: block;
 	width: 100%;
+	@include max(sm) {
+		padding-bottom: 65px;
+	}
 	&__title {
 		margin-bottom: 40px;
 	}
 	&__list {
+
 		position: relative; 
 		width: 100%;
 		display: grid; 
@@ -2750,21 +2769,52 @@
 			"four fife six"
 			"seven eight nine"; 
 		@include max(xl) {
-			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr;
 			grid-template-areas: 
-			"one one two two"
-			"seven seven three three"
-			"four four fife fife"
-			"four four fife fife"
-			"six six eight eight"
-			"six six eight eight"; 
+			"one two three"
+			"four fife six"
+			"seven eight nine"; 
 		}
-		@include max(xs) {
-			gap: 15px;
+		@include max(lg) {
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 
+			"one two"
+			"three four"
+			" fife six"
+			"seven eight" 
+			"nine nine"; 
+		}
+		@include max(sm) {
+			grid-template-columns: 1fr;
+			gap: 20px; 
+			margin-top: 30px;
+			grid-template-areas: 
+			"one"
+			"two"
+			"three"
+			"four"
+			"fife"
+			"six"
+			"seven" 
+			"eight" 
+			"nine";
 		}
 		&__item {
 			display: grid;
 			width: 100%;
+			.video-reviews__text {
+				@include max(lgBig) {
+					font-size: 16px !important;
+				}
+				@include max(md) {
+					font-size: 16px !important;
+				}
+				@include max(sm) {
+					font-size: 14px !important;
+					padding: 10px;
+				}
+
+			}
 			&__link {
 				position: relative;
 				display: block;
@@ -2807,6 +2857,7 @@
 			&--nine { 
 				grid-area: nine; 
 			}
+			
 		}
 	}
 
@@ -3585,6 +3636,17 @@
 	}
 	.connection__contacts::before {
 		content: url(../img/icons/phone.png);
+	}
+	.connection__button:hover {
+		border-bottom: none;
+		font-weight: 300;
+		
+	}
+	.connection__phone:hover {
+		border-bottom: none;
+		font-weight: 300;
+    text-shadow: 0 0 0.7px #4C6E9A, 0 0 0.7px #4C6E9A;
+    color: #4C6E9A;
 	}
 	&__logo {
 		@include max(xs) {

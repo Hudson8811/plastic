@@ -184,6 +184,9 @@
 		padding-top: 0;
 		margin-top: 0;
 		width: auto;
+		@include max(xs) {
+			padding-left: 15px;
+		}
 		li {
 			position: relative;
 			color: #5F6366;
@@ -217,11 +220,12 @@
 				@include max(sm) {
 					height: 6px;
 					width: 6px;
-					top: 8px;
+					top: -1px;
 				}
 				@include max(xs) {
 					height: 4px;
 					width: 4px;
+					top: -2px;
 				}
 			}
 		}

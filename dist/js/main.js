@@ -259,7 +259,8 @@ jQuery(function () {
 						watchSlidesProgress: true,
 						direction: 'horizontal',
 						centeredSlides: false,
-							centeredSlidesBounds: false,
+						centeredSlidesBounds: false,
+						// loop: true,
 						spaceBetween: 10,
 						navigation: {
 								nextEl: ".gallery-thumbs-next",
@@ -365,7 +366,7 @@ jQuery(function () {
 			//   galleryMain.controller.control = galleryThumbs;
 		});
 	
-	//   galleryThumbs.controller.control = galleryMain;
+	  galleryThumbs.controller.control = galleryMain;
 		galleryMain.controller.control = galleryThumbs;
 	});
 
@@ -390,6 +391,7 @@ jQuery(function () {
 					search.children(".header__other__search__input").removeClass("active"); 
 		}
 	});
+	
 	
 	mobMenuClose.addEventListener("click", function () {
 		mobMenu.classList.remove("active");
