@@ -154,22 +154,22 @@
 
 	}
 	img {
-		@media (max-width: 1400px) {
-			height: auto;
+		@media (max-width: 1250px) {
+			display: none;
 		}
 	}
 	&__title {
-		@media (max-width: 1200px) {
+		@media (max-width: 1250px) {
 			position: relative;
 			display: block;
 			width: 100%;
 			max-width: 100%;
 			padding-bottom: 40px;
-			margin-left: 0;
+			margin-left: 0 !important;
 			margin-top: 0;
 		}
 		&--desc{
-			@media (max-width: 1200px) {
+			@media (max-width: 1250px) {
 				display: none;
 			}			
 		}
@@ -193,6 +193,13 @@
 	}
 	&__form {
 		z-index: 1;
+		@media (max-width: 1250px) {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 40px;
+			max-width: 500px;
+		}
 		@media (max-width: 1200px) {
 			width: 100%;
 			margin-left: auto;
