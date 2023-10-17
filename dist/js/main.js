@@ -243,6 +243,13 @@ jQuery(function () {
 		minimumResultsForSearch: Infinity,
 		dropdownAutoWidth: true,
 	});
+	$('.js-prices-services').select2({
+		theme: "prices-services",
+		language: 'ru',
+		// width: '100%',
+		minimumResultsForSearch: Infinity,
+		dropdownAutoWidth: true,
+	});
 
 	$('.product-card__slider').each(function () {
 		var galleryThumbs;

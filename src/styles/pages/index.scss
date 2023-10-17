@@ -55,9 +55,14 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-			max-width: 796px;
+			min-width: 796px;
 			height: auto;
-			left: -107px;
+			left: -180px;
+			@media (max-width: 1650px) {
+				min-width: auto;
+				max-width: 796px;
+				left: -107px;
+			}
 			@include max(md) {
 				left: auto;
 				margin-bottom: 40px;
@@ -82,6 +87,12 @@
         object-position: center center;
       }
     }
+		&__content {
+			position: relative;
+			display: flex;
+			width: 100%;
+			flex-flow: column nowrap;
+		}
 	}
 	&__circles {
 		margin-top: 48px;
@@ -222,6 +233,15 @@
 		background: #C8DCEA;
 		padding-top: 70px;
 		padding-bottom: 70px;
+		&--light {
+			background: #EAEEF3;
+		}
+	}
+}
+.surgeon-head {
+	img {
+		width: auto;
+		max-width: 100%;
 	}
 }
 .service {
@@ -239,6 +259,7 @@
 			margin-left: 0;
 		}
 		&__item {
+			margin-bottom: 45px;
 			@include max(xs) {
 				font-size: 20px;
 				padding-left: 30px;
@@ -278,7 +299,12 @@
 	}
 	&__surgeon {
 		position: relative;
-		right: 0 !important;
+		right: auto !important;
+		left: -100px;
+		@include max(md) {
+			left: 0;
+			
+		}
 		img {
 			@include max(md) {
 				position: relative;
@@ -302,6 +328,11 @@
 		}
 	}
 	.white-rectangle {
+		width: 104%;
+		left: -230px;
+		@include max(md) {
+			left: -50px;
+		}
 		@include max(sm) {
 			height: 50px;
 		}
@@ -553,7 +584,7 @@
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
-		padding-top: 38px;
+		padding-top: 0px;
 		padding-bottom: 53px;
 		width: 100%;
 	}
@@ -1047,19 +1078,20 @@
 				left: auto;
 				right: -30px;
 				top: 103px;
-				transform: rotate(175deg);
+				transform: rotate(179deg);
 			}
 			&--3 {
 				width: 239px;
 				left: auto;
 				right: -30px;
-				top: 250px;
+				top: 290px;
 			}
 			&--4 {
 				width: 238px;
 				left: auto;
-				right: 0;
-				top: 575px;
+				right: 25px;
+				top: 685px;
+				transform: rotate(352deg);
 			}
 		}
 		img {
@@ -1079,6 +1111,7 @@
 		background: transparent;
 		transition: all .3s;
 		// padding: 54px 50px;
+		margin-bottom: 35px;
 		&:first-child {
 			padding-bottom: 0;
 		}
@@ -1415,6 +1448,9 @@
 		flex-flow:  row nowrap;
 		width: 100%;
 		margin-bottom: 70px;
+		&:last-child {
+			margin-bottom: 0;
+		}
 		@include max(md) {
 			margin-bottom: 60px;
 		}
@@ -1456,7 +1492,7 @@
 		&__line {
 			position: relative;
 			display: flex;
-			border-bottom: 1px solid #5F6366;
+			border-bottom: 3px solid #5F6366;
 			width: 100%;
 			margin-right: 15px;
 			@include max(xs) {
@@ -1466,7 +1502,7 @@
 		&__value {
 			position: relative;
 			display: flex;
-			width: 100%;
+			min-width: 395px;
 			color: #4C6D9A;
 			font-family: $rosa;
 			font-size: 65px;
@@ -1475,7 +1511,11 @@
 			line-height: 0.6;
 			white-space: nowrap;
 			letter-spacing: 5.85px;	
+			@include max(lg) {
+				min-width: auto;
+			}
 			@include max(md) {
+
         font-size: 42px;
 			}
 			@include max(sm) {
@@ -1685,6 +1725,9 @@
 .reviews {
 	position: relative;
 	width: 100%;
+	.section-title {
+		margin-bottom: 0;
+	}
 	&__wrapper {
 		position: relative;
 		width: 100%;
@@ -1725,8 +1768,12 @@
 		}
 	}
 	&__item {
+		margin-top: 0 !important;
 		position: relative;
 		width: 100% !important;
+		@include max(lg) {
+			margin-top: 30px !important;
+		}
 	}
 }
 .reviews-menu {
@@ -1736,9 +1783,11 @@
 	align-items: flex-start;
 	flex-flow: column nowrap;
 	width: 450px;
+	margin-top: -140px;
 	@include max(md) {
 		width: 100%;
 		flex-flow: row wrap;
+		margin-top: 0;
 	}
 	@include max(xs) {
 		width: 100%;
@@ -2270,7 +2319,10 @@
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-flow: column;
-	width: 100%;	
+	width: 100%;
+	&__title {
+		color: #4C6D9A;
+	}
 	&__section {
 		position: relative;
 		display: flex;
@@ -2419,8 +2471,17 @@
 				font-style: normal;
 				font-weight: 300;
 				line-height: normal;
-				letter-spacing: 1.26px;				
+				letter-spacing: 1.26px;
+				margin-right: 35px;				
 			}
+		}
+		&__filter {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			width: 100%;
+			max-width: 694px;
 		}
 		&__footnote {
 			color: #5F6366;
@@ -2469,6 +2530,7 @@
 				position: relative;
 				transition: all 0.3s;
 				margin-bottom: 35px;
+				width: 100%;
 				@include max(md) {
 					align-items: flex-start;
 				}
@@ -2499,9 +2561,11 @@
 				}
 				&__line  {
 					margin-right: 18px;
+					border-bottom: 1px solid #5F6366;
 				}
 				&__value {
 					width: auto;
+					min-width: 120px;
 					transition: all 0.3s;
 					color: #5E6266;
 					font-size: 25px;
@@ -2827,6 +2891,11 @@
 				display: block;
 				width: 100%;
 				height: 100%;
+				border-radius: 20px;
+				overflow: hidden;
+				&:before {
+					padding-top: 60.15% !important;			
+				}
 				img {
 					position: relative;
 					display: block;
@@ -2836,12 +2905,30 @@
 					object-position: center center;
 
 				}
+
 			}
 			&--two { 
 				grid-area: two; 
 			}
 			&--one { 
-				grid-area: one; 
+				grid-area: one;
+				padding-right: 40px;
+				@include max(xl) {
+					padding-right: 0;
+				}
+				.video-reviews__text {
+					@include max(xl) {
+						font-size: 20px !important;
+					}
+					@include max(lgBig) {
+						font-size: 16px !important;
+					}
+				}
+				.videos__list__item__link {
+					&::before {
+						padding-top: 64.04% !important;
+					}
+				}
 			}
 			&--three { 
 				grid-area: three; 
@@ -2867,7 +2954,17 @@
 			
 		}
 	}
-
+	.operations__item__link {
+		&:hover {
+			color:#4D6E9B;
+			svg {
+				fill: #4D6E9B;
+				rect {
+					fill: #4D6E9B;
+				}
+			}
+		}
+	}
 }
 .nav-tabs {
 	display: flex
@@ -3525,14 +3622,14 @@
 				}
 				&:hover {
 					transition: all .1s;
-					background: $dark-gray;
+					color: #4C6E9A;
 				}
 			}
 			.select2-results__option--selected {
 				font-weight: 700;
 				&:hover {
 					transition: all .1s;
-					background: $dark-gray;
+					color: #4C6E9A;
 				}
 			}
 		}
@@ -3610,6 +3707,113 @@
 							font-weight: 300;
 							line-height: normal;
 							letter-spacing: 0.5px;
+							@include max(sm) {
+								font-size: 20px;
+							}
+							@include max(xs) {
+									font-size: 14px !important;
+							}							
+            }
+        }
+    } 
+	}
+	
+}
+.periodSelect.periodSelect--prices-services {
+	margin-bottom: 45px !important;
+	@include max(sm) {
+		margin-bottom: 25px !important;
+	}		
+	@include max(xs) {
+		display: none !important;
+	}		
+	.select2-container.select2-container--prices-services {
+		background: transparent;
+		margin-bottom: 0;
+		height: 30px;
+		.select2-selection--single {
+			height: 30px;
+			min-width: 100%;
+			color: #4C6D9A;
+			font-size: 25px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			letter-spacing: 0.5px;
+			padding-left: 50px;
+			@include max(sm) {
+				padding-left: 0px;
+			}		
+			.select2-selection__rendered {
+				color: #4C6D9A;
+				font-size: 25px;
+				font-style: normal;
+				font-weight: 300;
+				line-height: normal;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				overflow: visible;
+				@include max(sm) {
+					font-size: 20px;
+				}
+				@include max(xs) {
+						font-size: 20px;
+				}				
+				&::before {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 33px;
+					height: 2px;
+					left: 5px;
+					background: #4C6D9A;
+					margin-right: 7px;
+					@include max(sm) {
+						display: none;
+					}				
+				}				
+			}
+			@include max(sm) {
+        font-size: 20px;
+			}
+			@include max(xs) {
+				font-size: 20px;
+			}
+    }
+		.select2-selection__arrow {
+			margin-left: 20px;
+			min-width: 16px;
+			// background: url(../img/svg/select2-selection__arrow--black.svg) no-repeat center center;
+		}
+		&.select2-container--open {
+
+		}
+    .select2-selection--single {
+
+    }
+    .select2-dropdown {
+			display: none;
+        .select2-results {
+            .select2-results__option--selected {
+							&:hover {
+								transition: all .1s;
+								background: transparent !important;
+							}
+
+            }
+            .select2-results__option {
+							color: #000;
+							font-size: 25px;
+							font-style: normal;
+							font-weight: 300;
+							line-height: normal;
+							letter-spacing: 0.5px;
+	
+							&:hover {
+								transition: all .1s;
+								background: transparent !important;
+							}
 							@include max(sm) {
 								font-size: 20px;
 							}

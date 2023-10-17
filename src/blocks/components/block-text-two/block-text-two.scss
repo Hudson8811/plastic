@@ -175,7 +175,37 @@
 			text-decoration: none !important;
 			transition: all .5s;
 			text-shadow: 0 0 0.15px transparent, 0 0 0.15px transparent !important;
-		}	
+		}
+		&.block__textTwo__link {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			text-decoration: none !important;
+			color: #4C6D9A !important;
+			font-size: 27px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			letter-spacing: 5.94px;
+			transition: all 0.3s;
+			&:hover	 {
+				transition: all 0.3s;
+				color:#5F6366 !important;
+				&::before {
+					background: #5F6366;
+				}
+			}
+			&::before {
+				content: "";
+				position: relative;
+				display: block;
+				background: #4C6D9A;
+				width: 26px;
+				height: 3px;
+				margin-right: 20px;
+			}
+		}
 	}
 	ul {
 		position: relative;

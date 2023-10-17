@@ -107,11 +107,35 @@
 			}
 	}
 }
+.about {
+	&__fact {
+		margin-top: 0;
+		margin-bottom: 61px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+
+		&__count {
+			position: relative;
+			display: inline-block;
+			top: 10px;
+			line-height: 1;
+		}
+	}
+	&__bcgr{
+		&-right {
+			width: 48%;
+		}
+	}
+	&__photo {
+		right: 140px;
+	}
+}
 .connection{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 35px;
+	margin-bottom: 25px;
 
 	&__social{
 			display: flex;
