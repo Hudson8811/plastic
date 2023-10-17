@@ -5150,6 +5150,10 @@ body.Bodymotionless {
   right: 140px;
 }
 
+.header .connection {
+  margin-bottom: 25px;
+}
+
 .connection {
   display: flex;
   justify-content: space-between;
