@@ -395,7 +395,7 @@
 			"one one three four"
 			"fife six eight eight"
 			"fife seven eight eight"; 
-		@include max(xl) {
+		@include max(lgBig) {
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 			grid-template-areas: 
 			"one one two two"

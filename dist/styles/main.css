@@ -9504,11 +9504,6 @@ body.Bodymotionless {
     margin-right: 35px;
   }
 
-  .portfolio__list {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "one one two two" "seven seven three three" "four four fife fife" "four four fife fife" "six six eight eight" "six six eight eight";
-  }
-
   .operations__col:nth-child(1) {
     display: none;
   }
@@ -9819,6 +9814,11 @@ body.Bodymotionless {
 
   .menu-laptop__tab {
     margin-bottom: 24px;
+  }
+
+  .portfolio__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "one one two two" "seven seven three three" "four four fife fife" "four four fife fife" "six six eight eight" "six six eight eight";
   }
 
   .articles-menu__tabs {
