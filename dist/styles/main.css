@@ -6652,6 +6652,11 @@ body.Bodymotionless {
 .offer {
   background: transparent;
   padding: 0;
+  width: 100%;
+}
+
+.offer__wrapper {
+  width: 100%;
 }
 
 .offer__title--mob {
@@ -6682,7 +6687,7 @@ body.Bodymotionless {
 
 .surgeon-head img {
   width: auto;
-  max-width: 100%;
+  max-width: 95%;
 }
 
 .service .service__list__item {
@@ -9764,6 +9769,11 @@ body.Bodymotionless {
 
   .block__textTwo img.float--left {
     float: none;
+  }
+
+  .offer img {
+    height: auto;
+    width: 50%;
   }
 
   .operations__title {
