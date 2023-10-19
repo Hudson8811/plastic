@@ -34,11 +34,14 @@ body.Bodymotionless {
 		width: 1482px;
 		max-width: calc(100% - 40px * 2);
 	}
+    @media (max-width: 1440px) {
+		width: 1482px;
+		max-width: calc(100% - 40px * 2);
+    }
 	@include max(lg) {
-		width: 1168px;
+		width: 1250px;
 		max-width: calc(100% - 32px * 2);
 	}
-
 	@include max(md) {
 		max-width: calc(100% - 32px * 2);
 	}

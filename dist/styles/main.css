@@ -6649,6 +6649,48 @@ body.Bodymotionless {
   height: 100%;
 }
 
+.about {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.about__picture {
+  position: relative;
+  width: 560px;
+  max-width: 560px;
+  display: block;
+}
+
+.about__picture:before {
+  content: "";
+  display: block;
+  padding-top: 137.92%;
+  position: relative;
+}
+
+.about__picture img,
+.about__picture picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center right;
+  z-index: 1;
+}
+
+.about__photo--mob {
+  display: none;
+}
+
+.about__advantages__section {
+  display: none !important;
+}
+
 .offer {
   background: transparent;
   padding: 0;
@@ -6843,12 +6885,45 @@ body.Bodymotionless {
   left: 0px;
 }
 
+.articles__descr p {
+  width: 100% !important;
+}
+
 .articles__wrapper {
   min-height: 795px;
 }
 
 .articles__bg-photo {
   bottom: 115px;
+}
+
+.articles__picture {
+  position: relative;
+  width: 440px;
+  max-width: 440px;
+  display: block;
+}
+
+.articles__picture:before {
+  content: "";
+  display: block;
+  padding-top: 157.95%;
+  position: relative;
+}
+
+.articles__picture img,
+.articles__picture picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center right;
+  z-index: 1;
 }
 
 .articles-menu {
@@ -6866,7 +6941,6 @@ body.Bodymotionless {
   justify-content: flex-start;
   align-items: flex-start;
   padding-top: 0px;
-  padding-bottom: 53px;
   width: 100%;
 }
 
@@ -9509,6 +9583,52 @@ body.Bodymotionless {
     margin-right: 35px;
   }
 
+  .about {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .about__data {
+    width: 100%;
+    padding-top: 88px;
+    padding-bottom: 78px;
+  }
+
+  .about__fact {
+    display: none;
+    visibility: hidden;
+  }
+
+  .about__facts {
+    display: none;
+    visibility: hidden;
+  }
+
+  .about__photo--desc {
+    display: none;
+  }
+
+  .about__photo--mob {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 656px;
+    right: -40px;
+    left: auto;
+    top: 0;
+    background: #9DC1DA;
+  }
+
+  .about__bcgr-right {
+    display: none !important;
+  }
+
+  .about__advantages__section {
+    display: flex !important;
+  }
+
   .operations__col:nth-child(1) {
     display: none;
   }
@@ -9635,6 +9755,11 @@ body.Bodymotionless {
   .service__list__item {
     font-size: 36px;
     margin-bottom: 35px;
+  }
+
+  .container {
+    width: 1482px;
+    max-width: calc(100% - 80px);
   }
 }
 
@@ -9771,9 +9896,17 @@ body.Bodymotionless {
     float: none;
   }
 
+  .about__photo--mob {
+    right: -40px;
+  }
+
   .offer img {
     height: auto;
     width: 50%;
+  }
+
+  .articles__descr {
+    width: 100%;
   }
 
   .operations__title {
@@ -9831,8 +9964,54 @@ body.Bodymotionless {
     grid-template-areas: "one one two two" "seven seven three three" "four four fife fife" "four four fife fife" "six six eight eight" "six six eight eight";
   }
 
+  .articles__title {
+    order: 1;
+    margin-bottom: 42px;
+  }
+
+  .articles__descr {
+    order: 3;
+  }
+
+  .articles__wrapper {
+    min-height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    flex-flow: column nowrap;
+  }
+
+  .articles__bg-photo {
+    order: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    bottom: auto !important;
+    height: auto !important;
+  }
+
+  .articles__bg-photo img {
+    height: 100% !important;
+  }
+
+  .articles__picture {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .articles__picture:before {
+    padding-top: 45.68%;
+    max-width: 100%;
+  }
+
   .articles-menu__tabs {
     flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: flex-end;
   }
 
   .articles-menu__tab {
@@ -10031,7 +10210,7 @@ body.Bodymotionless {
 
 @media only screen and (max-width: 1250px) {
   .container {
-    width: 1168px;
+    width: 1250px;
     max-width: calc(100% - 64px);
   }
 
@@ -10095,9 +10274,8 @@ body.Bodymotionless {
     width: calc(100% - 155px);
   }
 
-  .articles-menu__tabs {
-    flex-flow: row wrap;
-    justify-content: flex-end;
+  .about__photo--mob {
+    right: -32px;
   }
 
   .operations__special .operations {
@@ -10532,6 +10710,26 @@ body.Bodymotionless {
     margin: 15px 0 15px;
   }
 
+  .about {
+    padding: 0;
+  }
+
+  .about .container {
+    flex-flow: column-reverse nowrap;
+  }
+
+  .about__photo--mob {
+    right: auto;
+    left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+
+  .about__photo img {
+    height: 100%;
+  }
+
   .offer__title--mob {
     display: block;
   }
@@ -10847,10 +11045,6 @@ body.Bodymotionless {
     display: none;
   }
 
-  .about__data {
-    margin-bottom: 200px;
-  }
-
   .offer {
     width: 100%;
   }
@@ -10923,10 +11117,6 @@ body.Bodymotionless {
   .articles__wrapper {
     height: auto;
     min-height: auto;
-  }
-
-  .articles__bg-photo {
-    display: none;
   }
 
   .articles-menu {
@@ -11369,6 +11559,40 @@ body.Bodymotionless {
 
   .preview__circles__item {
     margin-bottom: 20px;
+  }
+
+  .about .container {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+  }
+
+  .about__data {
+    max-width: calc(100% - 32px);
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 78px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about__picture {
+    max-width: 412px;
+  }
+
+  .about__picture:before {
+    padding-top: 140.53%;
+    max-width: 412px;
+  }
+
+  .about__photo--mob {
+    padding-top: 200px;
+  }
+
+  .about__advantages__section {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .offer__form {
@@ -11910,11 +12134,17 @@ body.Bodymotionless {
   }
 
   .about__data {
-    margin-bottom: 50px;
+    max-width: calc(100% - 32px);
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .about__photo {
-    display: none;
+  .about__picture {
+    max-width: 95%;
+  }
+
+  .about__photo--mob {
+    padding-top: 100px;
   }
 
   .service .service__list__item {
@@ -12135,6 +12365,12 @@ body.Bodymotionless {
 
   .footer__logo img {
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .about__photo--mob {
+    display: flex !important;
   }
 }
 

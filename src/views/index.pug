@@ -121,7 +121,11 @@ block content
 							</p>
 							<a href="#" class="detail white">подробнее</a>
 					</div>
-					
+					<div class="about__photo about__photo--mob">
+						picture.about__picture
+							source(media="(max-width: 767px)", srcset="img/body_surgery--mob.png")
+							img(src="img/body_surgery.png", alt="picture")
+					</div>					
 					<div class="about__facts">
 							<div class="about__fact">
 									<div class="about__fact__descr">Врачебного стажа</div>
@@ -141,13 +145,32 @@ block content
 							</div>
 					</div>
 			</div>
-
 			<div class="about__bcgr-right"></div>
-			<div class="about__photo">
-					<img src="img/surgeon/body_surgery.png" alt="Хирирг">
+			<div class="about__photo about__photo--desc">
+				picture.about__picture
+					source(media="(max-width: 767px)", srcset="img/body_surgery--mob.png")
+					img(src="img/body_surgery.png", alt="picture")
 			</div>
 	</section>
-
+	section.advantages__section.about__advantages__section
+		.container
+			.advantages
+				.advantages__item
+					.advantages__item__value.title__65 19 лет
+					.advantages__item__text.text__25
+						!="ВРАЧЕБНОГО<br> СТАЖА"
+				.advantages__item
+					.advantages__item__value.title__65 350+
+					.advantages__item__text.text__25
+						!="ОПЕРАЦИЙ<br> В ГОД"
+				.advantages__item
+					.advantages__item__value.title__65 1500+
+					.advantages__item__text.text__25
+						!="СЧАСТЛИВЫХ<br> ЛИЦ"
+				.advantages__item
+					.advantages__item__value.title__65 4
+					.advantages__item__text.text__25
+						!="УНИКАЛЬНЫЕ<br> СЕРТИФИЦИРОВАННЫЕ ТЕХНИКИ"
 	section.offer__section.offer__section--light
 		.container
 			.offer
