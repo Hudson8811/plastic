@@ -6,5 +6,6 @@
 @@include("./libs/select2.min.js") 
 @@include("./libs/jarallax.min.js")
 @@include("./libs/jarallax-video.min.js")
+@@include("./libs/bvi.min.js")
 //my files
 @@include("./import/main.js")

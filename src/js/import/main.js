@@ -1,9 +1,11 @@
 jQuery(function () { 
+	new isvek.Bvi({
+		target: '.js-weakly-seeing',
+	});
+
 
 	$('.js-mask-phone').mask('+7(000)000-00-00');
 
-
-	
 
 	var mainSlider;
 	$('.js-preview__slider').each(function(){
@@ -659,3 +661,11 @@ accordions.forEach((accordion) => {
     cbOpen: null // callback-функция при открытии вкладки - function (e, $this) {}
     
 	});
+
+
+
+	// new isvek.Bvi({
+  //   target: '.site-main',
+  //   fontSize: 24,
+  //   theme: 'black'
+  // });
