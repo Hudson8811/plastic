@@ -548,24 +548,6 @@ accordions.forEach((accordion) => {
 		});
 	}
 
-	var menuLinkInvested =document.querySelectorAll(".js-menu__link__invested")
-	if (menuLinkInvested !=null) {
-		menuLinkInvested.forEach((item) => {
-			item.addEventListener("click", function (e) {
-						e.preventDefault();
-						var link = e.target.parentNode;
-						var linkList = link.querySelector(".menu-laptop__list");
-						link.classList.toggle("active")
-						linkList.classList.toggle("active")
-						linkList.addEventListener("mouseleave", function() {
-							link.classList.remove("active")
-							linkList.classList.remove("active")
-						})
-			});
-		})
-	}
-
-
 	$(function ($, window, document, undefined) {
     "use strict";
     var pluginName = 'simpleAccordion',

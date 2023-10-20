@@ -7836,6 +7836,39 @@ body.Bodymotionless {
   color: #4C6E9A !important;
 }
 
+.header .js-menu__link__invested:hover {
+  background: #fff;
+  border-radius: 10px 10px 0px 0px;
+  color: #4C6E9A;
+}
+
+.header .js-menu__link__invested:hover .menu__link {
+  border-bottom: 2px solid transparent;
+  text-shadow: 0 0 0.7px #4C6E9A, 0 0 0.7px #4C6E9A;
+  color: #4C6E9A;
+  font-weight: 300;
+}
+
+.header .js-menu__link__invested:hover .menu__link svg {
+  fill: #4C6E9A;
+  transition: all 0.3s;
+  transform: rotate(180deg);
+}
+
+.header .js-menu__link__invested:hover .menu__link svg path {
+  fill: #4C6E9A;
+}
+
+.header .js-menu__link__invested:hover .menu-laptop__list {
+  transition: all 0.3s;
+  width: 100%;
+  height: auto;
+  visibility: inherit;
+  pointer-events: all;
+  display: flex;
+  opacity: 1;
+}
+
 .about__fact {
   margin-top: 0;
   margin-bottom: 61px;
