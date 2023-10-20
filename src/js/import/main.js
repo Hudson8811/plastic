@@ -37,6 +37,30 @@ jQuery(function () {
 			// }
 		});
 	})
+	var articleThemeSlider;
+	$('.js-article-theme__slider').each(function(){
+		var slider=$(this)
+		var articleThemeSlider = new Swiper(slider[0], {
+			direction: 'vertical',
+			slidesPerView: "auto",
+			centeredSlides: false,
+			spaceBetween: 17,
+			navigation: {
+					nextEl: ".article-theme__slider-next",
+					prevEl: ".article-theme__slider-prev"
+			},
+			// thumbs: {
+			// 		swiper: galleryThumbs
+			// },
+			// breakpoints: {
+			//     // when window width is >= 480px
+			//     992: {
+			//         slidesPerView: 2.2,
+			//         spaceBetween: 30
+			//     },
+			// }
+		});
+	})
 	var previewSale;
 	$('.js-preview__sale__slider').each(function(){
 		var slider=$(this)
@@ -645,9 +669,3 @@ accordions.forEach((accordion) => {
 	});
 
 
-
-	// new isvek.Bvi({
-  //   target: '.site-main',
-  //   fontSize: 24,
-  //   theme: 'black'
-  // });

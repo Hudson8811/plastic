@@ -1,0 +1,82 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Questions-answer page"
+
+block content
+	.container 
+		section.news__section
+			.news__top
+				.news__title.title__100.pink Вопрос ответ
+				.news__sort
+					.news__sort__text.text__25 СОРТИРОВАТЬ ПО:
+					.periodSelect.periodSelect--date
+						<select class="js-example-date">
+							<option  value="" selected>ДАТА</option>  
+							<option  value="" >Дата 1</option>
+							<option  value="" >Дата 2</option>
+							<option  value="" >Дата 3</option>
+							<option  value="" >Дата 4</option>
+						</select>
+	.questions-answer
+		.container
+			.accordions
+				.accordion
+					.accordion__intro
+						p Вопрос и ответ
+						.accordion__intro__img 
+							<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M6.89429 5.77297L1.59099 0.46967C1.2981 0.176777 0.823223 0.176777 0.53033 0.46967V0.46967C0.237437 0.762563 0.237437 1.23744 0.53033 1.53033L6.89429 7.89429L13.2583 1.53033C13.5511 1.23744 13.5511 0.762563 13.2583 0.46967V0.46967C12.9654 0.176777 12.4905 0.176777 12.1976 0.46967L6.89429 5.77297Z" fill="black"/>
+							</svg>
+					.accordion__content
+						include ../../blocks/components/block-text-two-new/block-text-two-new
+
+				.accordion
+					.accordion__intro
+						p Вопрос и ответ
+						.accordion__intro__img 
+							<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M6.89429 5.77297L1.59099 0.46967C1.2981 0.176777 0.823223 0.176777 0.53033 0.46967V0.46967C0.237437 0.762563 0.237437 1.23744 0.53033 1.53033L6.89429 7.89429L13.2583 1.53033C13.5511 1.23744 13.5511 0.762563 13.2583 0.46967V0.46967C12.9654 0.176777 12.4905 0.176777 12.1976 0.46967L6.89429 5.77297Z" fill="black"/>
+							</svg>
+					.accordion__content
+						include ../../blocks/components/block-text-two-new/block-text-two-new
+
+				.accordion
+					.accordion__intro
+						p Вопрос и ответ
+						.accordion__intro__img 
+							<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M6.89429 5.77297L1.59099 0.46967C1.2981 0.176777 0.823223 0.176777 0.53033 0.46967V0.46967C0.237437 0.762563 0.237437 1.23744 0.53033 1.53033L6.89429 7.89429L13.2583 1.53033C13.5511 1.23744 13.5511 0.762563 13.2583 0.46967V0.46967C12.9654 0.176777 12.4905 0.176777 12.1976 0.46967L6.89429 5.77297Z" fill="black"/>
+							</svg>
+					.accordion__content
+						include ../../blocks/components/block-text-two-new/block-text-two-new
+
+				.accordion
+					.accordion__intro
+						p Вопрос и ответ
+						.accordion__intro__img 
+							<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M6.89429 5.77297L1.59099 0.46967C1.2981 0.176777 0.823223 0.176777 0.53033 0.46967V0.46967C0.237437 0.762563 0.237437 1.23744 0.53033 1.53033L6.89429 7.89429L13.2583 1.53033C13.5511 1.23744 13.5511 0.762563 13.2583 0.46967V0.46967C12.9654 0.176777 12.4905 0.176777 12.1976 0.46967L6.89429 5.77297Z" fill="black"/>
+							</svg>
+					.accordion__content
+						include ../../blocks/components/block-text-two-new/block-text-two-new
+
+
+	<section class="section__jarallax">
+		<div class="jarallax">
+			<picture class="jarallax-img">
+				<source media="..." srcset="img/section--88.png">
+				<img src="img/section--88.png" alt="">
+			</picture>
+		</div>	
+	</section>
+
+	<section class="order-call">
+			<form action="">
+					<input type="tel" name="phone_1" class="js-mask-phone input__phone " placeholder="+7 (___) ___-__-__">
+					<input type="submit" class="order-call__submit blue-buttom" value="Заказать звонок" />
+			</form>
+	</section>
+
+	

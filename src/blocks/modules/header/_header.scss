@@ -22,6 +22,11 @@
 					@media (max-width: 1450px) {
 						font-size: 16px;
 					}
+					.menu__link {
+						svg {
+							margin-left: 15px;
+						}
+					}
 					&:hover{
 							margin-right: 0px;
 							.menu__link {
@@ -764,7 +769,30 @@ header.header {
 			margin-bottom: 16px;
 		}
 		.accordion-group { 
-			margin: 0; 
+			position: relative;
+			margin-bottom: 16px;
+			min-height: 28px;
+		}
+		.accordion-link + .accordion-header.open {
+			color: #EDB3BE;
+		}
+		.accordion-link {
+			position: absolute;
+			top: 0;
+			left: 25px;
+			color: #fff;
+			font-size: 25px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			letter-spacing: 0.5px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			cursor: pointer;
+			display: flex;
+			justify-content: flex-start;
+			padding-left: 0px;
+			text-transform: uppercase;
 		}
 		.accordion-body {
 				display: none;
@@ -781,13 +809,12 @@ header.header {
 			font-weight: 300;
 			line-height: normal;
 			letter-spacing: 0.5px;
-			margin-bottom: 16px;
 			margin-left: 25px;
 			cursor: pointer;
 			position: relative;
 			display: flex;
 			justify-content: flex-start;
-			min-height: 12px;
+			min-height: 28px;
 			padding-left: 0px;
 			text-transform: uppercase;
 			&::before {
@@ -815,6 +842,8 @@ header.header {
 		}
 		.accordion-header.open {
 				color: #EDB3BE;
+				margin-bottom: 16px;
+				width: 0px;
 				&::before {
 					content: url(../img/folder__red.svg);
 				}
